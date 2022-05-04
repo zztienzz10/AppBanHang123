@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void ActionViewFlipper() {
         List<String> mangquangcao = new ArrayList<>();
-        mangquangcao.add("https://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-Le-hoi-phu-kien-800-300.png");
-        mangquangcao.add("https://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-HC-Tra-Gop-800-300.png");
-        mangquangcao.add("https://mauweb.monamedia.net/thegioididong/wp-content/uploads/2017/12/banner-big-ky-nguyen-800-300.jpg");
+        mangquangcao.add("https://www.dtv-ebook.com/images/files_2/2020/solo-leveling-thang-cap-mot-minh-jang-sung-lak.jpg");
+        mangquangcao.add("https://i.imgur.com/tAYsCFd.jpg");
+        mangquangcao.add("https://tctruyen.com/upload/comic/kimetsu-no-yaiba.jpg");
         for (int i = 0; i<mangquangcao.size();i++){
             ImageView imageView = new ImageView(getApplicationContext());
             Glide.with(getApplicationContext()).load(mangquangcao.get(i)).into(imageView);
@@ -101,7 +101,9 @@ public class MainActivity extends AppCompatActivity {
         .subscribe(
                 loaiSpModel -> {
                     if (loaiSpModel.isSuccess()){
-                        Toast.makeText(getApplicationContext(), loaiSpModel.getResult().get(0).getTensanpham(), Toast.LENGTH_LONG).show();
+                        mangloaisp = loaiSpModel.getResult();
+                        loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
+                        listViewManHinhChinh.setAdapter(loaiSpAdapter);
                     }
                 }
         ));
@@ -116,9 +118,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerlayout);
         //tao list
         mangloaisp = new ArrayList<>();
-        //tao adapter
-        loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
-        listViewManHinhChinh.setAdapter(loaiSpAdapter);
+
     }
     private boolean isConnected (Context context){
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -129,5 +129,11 @@ public class MainActivity extends AppCompatActivity {
         }else {
             return false;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        compositeDisposable.clear();
+        super.onDestroy();
     }
 }
