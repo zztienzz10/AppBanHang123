@@ -16,12 +16,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.appbanhang.R;
 import com.example.appbanhang.adapter.LoaiSpAdapter;
+import com.example.appbanhang.adapter.SanPhamMoiAdapter;
 import com.example.appbanhang.model.LoaiSp;
+import com.example.appbanhang.model.SanPhamMoi;
+import com.example.appbanhang.model.SanPhamMoiModel;
 import com.example.appbanhang.retrofit.ApiBanHang;
 import com.example.appbanhang.retrofit.RetrofitClient;
 import com.example.appbanhang.utils.Utils;
@@ -45,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
     List<LoaiSp> mangloaisp;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     ApiBanHang apiBanHang;
-
+    List<SanPhamMoi> mangSpMoi;
+    SanPhamMoiAdapter spAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +64,30 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"co Internet",Toast.LENGTH_LONG).show();
             ActionViewFlipper();
             getLoaiSanPham();
+            getSpMoi();
         }else {
             Toast.makeText(getApplicationContext(), "khong co internet", Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    private void getSpMoi() {
+        compositeDisposable.add(apiBanHang.getSpMoi()
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(
+                sanPhamMoiModel -> {
+                    if (sanPhamMoiModel.isSuccess()){
+                        mangSpMoi = sanPhamMoiModel.getResult();
+                        spAdapter = new SanPhamMoiAdapter(getApplicationContext(), mangSpMoi);
+                        recyclerViewManHinhChinh.setAdapter(spAdapter);
+                    }
+
+                },
+                throwable -> {
+                    Toast.makeText(getApplicationContext(),"không kết nói được với sever"+throwable.getMessage(), Toast.LENGTH_LONG).show();
+                }
+        ));
     }
 
     private void ActionBar() {
@@ -77,9 +102,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void ActionViewFlipper() {
         List<String> mangquangcao = new ArrayList<>();
-        mangquangcao.add("https://www.dtv-ebook.com/images/files_2/2020/solo-leveling-thang-cap-mot-minh-jang-sung-lak.jpg");
-        mangquangcao.add("https://i.imgur.com/tAYsCFd.jpg");
-        mangquangcao.add("https://tctruyen.com/upload/comic/kimetsu-no-yaiba.jpg");
+        mangquangcao.add("https://cdn0.fahasa.com/media/magentothem/banner7/brandday_Slide_840x320.jpg");
+        mangquangcao.add("https://cdn0.fahasa.com/media/magentothem/banner7/1980Books840x320.jpg");
+        mangquangcao.add("https://cdn0.fahasa.com/media/magentothem/banner7/disney-resize-840x320-t4-new.jpg");
         for (int i = 0; i<mangquangcao.size();i++){
             ImageView imageView = new ImageView(getApplicationContext());
             Glide.with(getApplicationContext()).load(mangquangcao.get(i)).into(imageView);
@@ -113,11 +138,15 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toobarmanhinhchinh);
         viewFlipper = findViewById(R.id.viewlipper);
         recyclerViewManHinhChinh = findViewById(R.id.recyclerview);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
+        recyclerViewManHinhChinh.setLayoutManager(layoutManager);
+        recyclerViewManHinhChinh.setHasFixedSize(true);
         listViewManHinhChinh = findViewById(R.id.listviewmanhinhchinh);
         navigationView = findViewById(R.id.navigationview);
         drawerLayout = findViewById(R.id.drawerlayout);
         //tao list
         mangloaisp = new ArrayList<>();
+        mangSpMoi = new ArrayList<>();
 
     }
     private boolean isConnected (Context context){

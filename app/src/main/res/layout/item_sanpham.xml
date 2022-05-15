@@ -15,7 +15,7 @@
         android:id="@+id/item_tensp"
         android:textSize="15sp"
         android:layout_marginLeft="10dp"
-        android:text="Điện Thoại"
+        android:text=" Truyện"
         android:textColor="@android:color/holo_red_light"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
