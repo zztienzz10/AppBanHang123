@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         Intent Truyen = new Intent(getApplicationContext(),TruyenActivity.class);
+                        Truyen.putExtra("loai",1 );
                         startActivity(Truyen);
                         break;
                     case 2:

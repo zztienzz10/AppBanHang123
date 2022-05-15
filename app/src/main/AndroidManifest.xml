@@ -17,7 +17,8 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity android:name=".activity.TieuThuyetActivity"></activity>
-        <activity android:name=".activity.TruyenActivity" />
+        <activity android:name=".activity.TruyenActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.MainActivity"
             android:label="Activity Title"

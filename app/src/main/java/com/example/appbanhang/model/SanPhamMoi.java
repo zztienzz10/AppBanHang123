@@ -5,7 +5,8 @@ public class SanPhamMoi {
     String tensp;
     String hinhanh;
     String giasp;
-
+    String mota;
+    int loai;
     public int getId() {
         return id;
     }
@@ -54,6 +55,4 @@ public class SanPhamMoi {
         this.loai = loai;
     }
 
-    String mota;
-    int loai;
 }
