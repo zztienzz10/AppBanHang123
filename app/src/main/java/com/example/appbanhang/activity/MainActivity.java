@@ -90,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(Truyen);
                         break;
                     case 2:
-                        Intent TieuThuyet = new Intent(getApplicationContext(),TieuThuyetActivity.class);
+                        Intent TieuThuyet = new Intent(getApplicationContext(),TruyenActivity.class);
+                        TieuThuyet.putExtra("loai",2 );
                         startActivity(TieuThuyet);
                         break;
                 }
@@ -174,6 +175,9 @@ public class MainActivity extends AppCompatActivity {
         //tao list
         mangloaisp = new ArrayList<>();
         mangSpMoi = new ArrayList<>();
+        if (Utils.manggiohang == null){
+            Utils.manggiohang = new ArrayList<>();
+        }
 
     }
     private boolean isConnected (Context context){

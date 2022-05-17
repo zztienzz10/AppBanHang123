@@ -21,6 +21,7 @@ public interface ApiBanHang {
     Observable<SanPhamMoiModel> getSanPham(
         @Field("page") int page,
         @Field("loai") int loai
+
     );
 
 }
