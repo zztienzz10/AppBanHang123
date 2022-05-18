@@ -7,7 +7,7 @@
     tools:context=".activity.ChiTietActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toobar"
-        android:background="#00FFFF"
+        android:background="#ff00dfff"
         app:title="chi tiết sản phẩm"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"

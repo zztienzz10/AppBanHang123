@@ -16,7 +16,15 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".activity.GioHangActivity"></activity>
+        <activity android:name=".activity.DangNhapActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.DangKiActivity" />
+        <activity android:name=".activity.GioHangActivity" />
         <activity
             android:name=".activity.ChiTietActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -28,11 +36,7 @@
             android:name=".activity.MainActivity"
             android:label="Activity Title"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
