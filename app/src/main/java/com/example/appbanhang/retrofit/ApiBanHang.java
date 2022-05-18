@@ -11,12 +11,13 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ApiBanHang {
+    //GET DATA
     @GET("getloaisp.php")
     Observable<LoaiSpModel> getLoaiSP();
 
     @GET("getspmoi.php")
     Observable<SanPhamMoiModel> getSpMoi();
-
+    //POST DATA
     @POST("chitiet.php")
     @FormUrlEncoded
     Observable<SanPhamMoiModel> getSanPham(
@@ -32,5 +33,10 @@ public interface ApiBanHang {
                     @Field("username") String username,
     @Field("mobile") String mobile
     );
-
+    @POST("dangnhap.php")
+    @FormUrlEncoded
+    Observable<UserModel> dangNhap(
+            @Field("email") String email,
+            @Field("pass") String pass
+    );
 }
