@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".activity.ThanhToanActivity"></activity>
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.ThanhToanActivity" />
         <activity android:name=".activity.DangNhapActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +37,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:label="Activity Title"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -39,6 +39,7 @@ import com.nex3z.notificationbadge.NotificationBadge;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.paperdb.Paper;
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
@@ -58,13 +59,13 @@ public class MainActivity extends AppCompatActivity {
     SanPhamMoiAdapter spAdapter;
     NotificationBadge badge;
     FrameLayout frameLayout;
+    ImageView imgsearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         apiBanHang = RetrofitClient.getInstance(Utils.BASE_URL).create(ApiBanHang.class);
-
         Anhxa();
         ActionBar();
         if (isConnected(this)){
@@ -97,6 +98,13 @@ public class MainActivity extends AppCompatActivity {
                         Intent TieuThuyet = new Intent(getApplicationContext(),TruyenActivity.class);
                         TieuThuyet.putExtra("loai",2 );
                         startActivity(TieuThuyet);
+                        break;
+                    case 4:
+                        //xoa key user
+                        Paper.book().delete("user");
+                        Intent dangnhap = new Intent(getApplicationContext(), DangNhapActivity.class);
+                        startActivity(dangnhap);
+                        finish();
                         break;
                 }
             }
@@ -159,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
                 loaiSpModel -> {
                     if (loaiSpModel.isSuccess()){
                         mangloaisp = loaiSpModel.getResult();
+                        mangloaisp.add(new LoaiSp("Đăng Xuất",""));
                         loaiSpAdapter = new LoaiSpAdapter(getApplicationContext(),mangloaisp);
                         listViewManHinhChinh.setAdapter(loaiSpAdapter);
                     }
@@ -167,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Anhxa(){
+        imgsearch = findViewById(R.id.imgsearch);
         toolbar = findViewById(R.id.toobarmanhinhchinh);
         viewFlipper = findViewById(R.id.viewlipper);
         recyclerViewManHinhChinh = findViewById(R.id.recyclerview);
@@ -195,6 +205,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent giohang = new Intent(getApplicationContext(), GioHangActivity.class);
                 startActivity(giohang);
+            }
+        });
+        imgsearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+              Intent intent = new Intent(getApplicationContext(), SearchActivity.class);
+              startActivity(intent);
             }
         });
 

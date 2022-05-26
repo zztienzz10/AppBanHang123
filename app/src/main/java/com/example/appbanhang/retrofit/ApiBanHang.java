@@ -17,22 +17,25 @@ public interface ApiBanHang {
 
     @GET("getspmoi.php")
     Observable<SanPhamMoiModel> getSpMoi();
+
     //POST DATA
     @POST("chitiet.php")
     @FormUrlEncoded
     Observable<SanPhamMoiModel> getSanPham(
-        @Field("page") int page,
-        @Field("loai") int loai
+            @Field("page") int page,
+            @Field("loai") int loai
 
     );
+
     @POST("dangki.php")
     @FormUrlEncoded
     Observable<UserModel> dangki(
             @Field("email") String email,
             @Field("pass") String pass,
-                    @Field("username") String username,
-    @Field("mobile") String mobile
+            @Field("username") String username,
+            @Field("mobile") String mobile
     );
+
     @POST("dangnhap.php")
     @FormUrlEncoded
     Observable<UserModel> dangNhap(
@@ -51,6 +54,12 @@ public interface ApiBanHang {
             @Field("soluong") int soluong,
             @Field("chitiet") String chitiet
 
+    );
+
+    @POST("timkiem.php")
+    @FormUrlEncoded
+    Observable<SanPhamMoiModel> search(
+            @Field("search") String search
     );
 
 
