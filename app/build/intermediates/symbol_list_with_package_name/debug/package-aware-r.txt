@@ -1516,6 +1516,7 @@ id honorRequest
 id horizontal_only
 id icon
 id icon_group
+id iddonhang
 id ifRoom
 id ignore
 id ignoreRequest
@@ -1532,6 +1533,7 @@ id item1
 id item2
 id item3
 id item4
+id item_giohang_check
 id item_giohang_cong
 id item_giohang_gia
 id item_giohang_giasp2
@@ -1616,6 +1618,8 @@ id radio
 id ratio
 id rectangles
 id recyclerview
+id recyclerview_chitiet
+id recyclerview_donhang
 id recyclerviewgiohang
 id recycleview_dt
 id recycleview_search
@@ -1819,6 +1823,7 @@ layout activity_search
 layout activity_thanh_toan
 layout activity_tieu_thuyet
 layout activity_truyen
+layout activity_xem_don
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1834,6 +1839,8 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout item_chitiet
+layout item_donhang
 layout item_giohang
 layout item_loading
 layout item_sanpham

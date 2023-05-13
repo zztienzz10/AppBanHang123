@@ -99,7 +99,13 @@ public class MainActivity extends AppCompatActivity {
                         TieuThuyet.putExtra("loai",2 );
                         startActivity(TieuThuyet);
                         break;
+
                     case 4:
+                        Intent donhang = new Intent(getApplicationContext(), XemDonActivity.class);
+                        startActivity(donhang);
+
+                        break;
+                    case 5:
                         //xoa key user
                         Paper.book().delete("user");
                         Intent dangnhap = new Intent(getApplicationContext(), DangNhapActivity.class);
