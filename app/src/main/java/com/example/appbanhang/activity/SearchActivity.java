@@ -95,8 +95,11 @@ public class SearchActivity extends AppCompatActivity {
                         sanPhamMoiList = sanPhamMoiModel.getResult();
                         adapterDt = new TruyenAdapter(getApplicationContext(),sanPhamMoiList);
                         recyclerView.setAdapter(adapterDt);
+                    }else{
+                        Toast.makeText(getApplicationContext(), sanPhamMoiModel.getMessage(),Toast.LENGTH_SHORT).show();
+                        sanPhamMoiList.clear();
+                        adapterDt.notifyDataSetChanged();
                     }
-
                 },
                 throwable -> {
                     Toast.makeText(getApplicationContext(), throwable.getMessage(), Toast.LENGTH_SHORT).show();
