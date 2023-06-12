@@ -24,6 +24,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.appbanhang.activity.YouTubeActivity" />
         <activity android:name="com.example.appbanhang.activity.XemDonActivity" />
         <activity android:name="com.example.appbanhang.activity.SearchActivity" />
         <activity android:name="com.example.appbanhang.activity.ThanhToanActivity" />

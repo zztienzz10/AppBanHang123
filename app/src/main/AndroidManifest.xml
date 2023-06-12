@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".activity.XemDonActivity"></activity>
+        <activity android:name=".activity.YouTubeActivity"></activity>
+        <activity android:name=".activity.XemDonActivity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.ThanhToanActivity" />
         <activity android:name=".activity.DangNhapActivity">

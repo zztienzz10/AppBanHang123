@@ -1421,6 +1421,7 @@ id btndangnhap
 id btndathang
 id btnmuahang
 id btnthemvaogiohang
+id btnyoutube
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -1542,7 +1543,10 @@ id item_giohang_soluong
 id item_giohang_tensp
 id item_giohang_tru
 id item_image
+id item_imgchitiet
+id item_soluongchitiet
 id item_tensp
+id item_tenspchitiet
 id item_touch_helper_previous_elevation
 id itemdt_gia
 id itemdt_image
@@ -1824,6 +1828,7 @@ layout activity_thanh_toan
 layout activity_tieu_thuyet
 layout activity_truyen
 layout activity_xem_don
+layout activity_you_tube
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

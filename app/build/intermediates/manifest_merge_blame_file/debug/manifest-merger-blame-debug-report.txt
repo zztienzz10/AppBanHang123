@@ -21,7 +21,7 @@
 13-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:8:22-73
 14
 15    <application
-15-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:10:5-42:19
+15-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:10:5-43:19
 16        android:allowBackup="true"
 16-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:11:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -40,80 +40,83 @@
 24-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:16:9-40
 25        android:usesCleartextTraffic="true" >
 25-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:17:9-44
-26        <activity android:name="com.example.appbanhang.activity.XemDonActivity" />
-26-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:19:9-70
-26-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:19:19-58
-27        <activity android:name="com.example.appbanhang.activity.SearchActivity" />
+26        <activity android:name="com.example.appbanhang.activity.YouTubeActivity" />
+26-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:19:9-71
+26-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:19:19-59
+27        <activity android:name="com.example.appbanhang.activity.XemDonActivity" />
 27-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:20:9-61
 27-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:20:19-58
-28        <activity android:name="com.example.appbanhang.activity.ThanhToanActivity" />
-28-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:21:9-64
-28-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:21:19-61
-29        <activity android:name="com.example.appbanhang.activity.DangNhapActivity" >
-29-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:9-28:20
-29-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:19-60
-30            <intent-filter>
-30-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:23:13-27:29
-31                <action android:name="android.intent.action.MAIN" />
-31-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:24:17-69
-31-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:24:25-66
-32
-33                <category android:name="android.intent.category.LAUNCHER" />
-33-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:26:17-77
-33-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:26:27-74
-34            </intent-filter>
-35        </activity>
-36        <activity android:name="com.example.appbanhang.activity.DangKiActivity" />
-36-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:29:9-61
-36-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:29:19-58
-37        <activity android:name="com.example.appbanhang.activity.GioHangActivity" />
-37-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:30:9-62
-37-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:30:19-59
-38        <activity
-38-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:31:9-33:59
-39            android:name="com.example.appbanhang.activity.ChiTietActivity"
-39-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:32:13-53
-40            android:theme="@style/AppTheme.NoActionBar" />
-40-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:33:13-56
-41        <activity android:name="com.example.appbanhang.activity.TieuThuyetActivity" />
-41-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:34:9-65
-41-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:34:19-62
-42        <activity
-42-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:35:9-37:59
-43            android:name="com.example.appbanhang.activity.TruyenActivity"
-43-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:36:13-52
-44            android:theme="@style/AppTheme.NoActionBar" />
-44-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:37:13-56
-45        <activity
-45-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:38:9-41:59
-46            android:name="com.example.appbanhang.activity.MainActivity"
-46-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:39:13-50
-47            android:label="Activity Title"
-47-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:40:13-43
-48            android:theme="@style/AppTheme.NoActionBar" />
-48-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:41:13-56
-49
-50        <provider
-50-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-51            android:name="androidx.startup.InitializationProvider"
-51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-52            android:authorities="com.example.appbanhang.androidx-startup"
-52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-53            android:exported="false" >
-53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-54            <meta-data
-54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-55                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-56                android:value="androidx.startup" />
-56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-57            <meta-data
-57-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\e06841608eedd99949a590a817674784\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-58                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-58-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\e06841608eedd99949a590a817674784\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-59                android:value="androidx.startup" />
-59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\e06841608eedd99949a590a817674784\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-60        </provider>
-61    </application>
-62
-63</manifest>
+28        <activity android:name="com.example.appbanhang.activity.SearchActivity" />
+28-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:21:9-61
+28-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:21:19-58
+29        <activity android:name="com.example.appbanhang.activity.ThanhToanActivity" />
+29-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:9-64
+29-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:22:19-61
+30        <activity android:name="com.example.appbanhang.activity.DangNhapActivity" >
+30-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:23:9-29:20
+30-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:23:19-60
+31            <intent-filter>
+31-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:24:13-28:29
+32                <action android:name="android.intent.action.MAIN" />
+32-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:25:17-69
+32-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:25:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:27:17-77
+34-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:27:27-74
+35            </intent-filter>
+36        </activity>
+37        <activity android:name="com.example.appbanhang.activity.DangKiActivity" />
+37-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:30:9-61
+37-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:30:19-58
+38        <activity android:name="com.example.appbanhang.activity.GioHangActivity" />
+38-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:31:9-62
+38-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:31:19-59
+39        <activity
+39-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:32:9-34:59
+40            android:name="com.example.appbanhang.activity.ChiTietActivity"
+40-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:33:13-53
+41            android:theme="@style/AppTheme.NoActionBar" />
+41-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:34:13-56
+42        <activity android:name="com.example.appbanhang.activity.TieuThuyetActivity" />
+42-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:35:9-65
+42-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:35:19-62
+43        <activity
+43-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:36:9-38:59
+44            android:name="com.example.appbanhang.activity.TruyenActivity"
+44-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:37:13-52
+45            android:theme="@style/AppTheme.NoActionBar" />
+45-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:38:13-56
+46        <activity
+46-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:39:9-42:59
+47            android:name="com.example.appbanhang.activity.MainActivity"
+47-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:40:13-50
+48            android:label="Activity Title"
+48-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:41:13-43
+49            android:theme="@style/AppTheme.NoActionBar" />
+49-->C:\Users\MSI PC\AndroidStudioProjects\app\src\main\AndroidManifest.xml:42:13-56
+50
+51        <provider
+51-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+52            android:name="androidx.startup.InitializationProvider"
+52-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+53            android:authorities="com.example.appbanhang.androidx-startup"
+53-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+54            android:exported="false" >
+54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+55            <meta-data
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+57                android:value="androidx.startup" />
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\0ff7e50bd8b7ebd74d628ddef8c0c85b\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+58            <meta-data
+58-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\e06841608eedd99949a590a817674784\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+59-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\e06841608eedd99949a590a817674784\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+60                android:value="androidx.startup" />
+60-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\MSI PC\.gradle\caches\transforms-2\files-2.1\e06841608eedd99949a590a817674784\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+61        </provider>
+62    </application>
+63
+64</manifest>

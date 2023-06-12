@@ -28,7 +28,7 @@ import java.util.Objects;
 
 public class ChiTietActivity extends AppCompatActivity {
     TextView tensp, giasp, mota;
-    Button btnthem;
+    Button btnthem, btnyoutube;
     ImageView imghinhanh;
     Spinner spinner;
     Toolbar toolbar;
@@ -54,6 +54,13 @@ public class ChiTietActivity extends AppCompatActivity {
 
             }
         });
+        btnyoutube.setOnClickListener(new View.OnClickListener() {
+                                          @Override
+                                          public void onClick(View view) {
+                                              
+                                          }
+                                      }
+        );
     }
 
     private void themGioHang() {
@@ -117,6 +124,7 @@ public class ChiTietActivity extends AppCompatActivity {
         btnthem = findViewById(R.id.btnthemvaogiohang);
         spinner = findViewById(R.id.spinner);
         imghinhanh = findViewById(R.id.imgchitiet);
+        btnyoutube = findViewById(R.id.btnyoutube);
         toolbar = findViewById(R.id.toobar);
         badge = findViewById(R.id.menu_sl);
         FrameLayout frameLayoutgiohang = findViewById(R.id.framegiohang);
